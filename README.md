@@ -1,5 +1,5 @@
 # Guard Comics
-## [home](https://clackclock.github.io/GuardComicsSite/)
+## [Home Page](https://clackclock.github.io/GuardComicsSite/)
 
 The comic company based within fantasy and the medieval and the straight up foolish
 
