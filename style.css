@@ -1,1 +1,139 @@
+body{
+    /* background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg"); */
+    background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg");
+    background-color: bisque;
+    background-size:cover;
+    /* position:absolute; */
+    /* float:right; */
+    /* clip: rect(0, 100px, 200px, 100%); */
+}
+#note{
+    /* background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg"); */
+    background-repeat: no-repeat;
+    /* https://www.rawpixel.com/image/11068331/image-cloud-cow-art */
+}
+header{
+    display: flex;
+    flex-direction: row;
+}
+.menu:hover{
+    background-color: beige;
+}
+
+h1{
+    font-family: "Jacquarda Bastarda 9", serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: start;
+    margin: 20px;
+
+    height: 60vh;
+    width:25vw;
+
+    background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
+    background-size: cover; 
+    background-color:hsla(35, 37%, 62%, 0.771);
+
+    outline-style:double;
+    outline-width: 10px;
+    outline-color: goldenrod;
+
+    /* position:absolute; 
+    /* float:right; 
+    clip: rect(100%, 50%, 50%, 100%); */
+}
+main div, main h1{
+    margin:10px;
+}
+
+/* man-made-horrors beyond my comprehension */
+.pageGuide{
+    display: flex;
+    justify-content: center;
+    display: none;
+    /* background-color:hsla(35, 37%, 62%, 0.5); */
+    /* visibility: hidden; */
+   
+}
+
+/* Fonts */
+.jacquarda-bastarda {
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* footer & extra */
+button{
+    margin: 10px;
+}
+/* CSS */
+.button-57 {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a4d;
+  border-radius: 8px;
+  color: black;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #ffdeda;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.button-57 span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+}
+.button-57 span:last-child {
+  color: rgb(255, 255, 255);
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+.button-57:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+}
+.button-57:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+}
+.button-57:hover span:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    /* color:#ffd700 */
+}
 
