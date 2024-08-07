@@ -1,75 +1,163 @@
 body{
-    /* background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg"); */
-    background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg");
-    background-color: bisque;
-    background-size:cover;
-    /* position:absolute; */
-    /* float:right; */
-    /* clip: rect(0, 100px, 200px, 100%); */
+  /* background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg"); */
+  background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg");
+  background-color: bisque;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  min-height: 100vh;
+
+  /* position:absolute; */
+  /* float:right; */
+  /* clip: rect(0, 100px, 200px, 100%); */
 }
 #note{
-    /* background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg"); */
-    background-repeat: no-repeat;
-    /* https://www.rawpixel.com/image/11068331/image-cloud-cow-art */
+  /* background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg"); */
+  /* https://www.rawpixel.com/image/11068331/image-cloud-cow-art */
+  background-repeat: no-repeat;
+
+  /* .pageGuide{
+  display: flex;
+  justify-content: end;
+  display: none;
+  flex-wrap: wrap;
+  max-width: 5%;
+  max-height: fit-content;
+
+  background-color:hsla(35, 37%, 62%, 0.5); */
+  /* visibility: hidden;
+  } 
+  .titleBan{
+  background-image: url("images/image-from-rawpixel-id-6659785-png.png");
+  }
+  */
 }
 header{
-    display: flex;
-    flex-direction: row;
-}
-.menu:hover{
-    background-color: beige;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  width: 100%;
+  max-height:180px;
+  
 }
 
 h1{
-    font-family: "Jacquarda Bastarda 9", serif;
+  /* https://www.rawpixel.com/image/6659922/vector-sticker-public-domain-vintage-illustration */
+  font-family: "Jacquarda Bastarda 9", serif;
+
+}
+hr{
+  border-style: double;
+  width:50%;
+  text-align:left;
 }
 
 main{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: start;
-    margin: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 
-    height: 60vh;
-    width:25vw;
-
-    background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
-    background-size: cover; 
-    background-color:hsla(35, 37%, 62%, 0.771);
-
-    outline-style:double;
-    outline-width: 10px;
-    outline-color: goldenrod;
-
-    /* position:absolute; 
-    /* float:right; 
-    clip: rect(100%, 50%, 50%, 100%); */
 }
-main div, main h1{
-    margin:10px;
+main h1{
+  margin:10px;
 }
 
 /* man-made-horrors beyond my comprehension */
-.pageGuide{
-    display: flex;
-    justify-content: center;
-    display: none;
-    /* background-color:hsla(35, 37%, 62%, 0.5); */
-    /* visibility: hidden; */
-   
+.menu{
+  display: flex;
+  justify-items: end;
+  align-items: center;
+  /* align-items: end; */
+}
+.menu:hover{
+  border-radius: 10px;
+  background-color: rgba(245, 245, 220, 0.599);
+}
+
+#titleText{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-family: "Sankofa Display", sans-serif;
+  font-size:50pt;
+  width:50%;
+}
+.leftSide{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.rightSide{
+  display: flex;
+  flex-direction: row;
+}
+#login{
+  display: flex;
+  justify-items: space-evenly;
+  align-items: center;
+  font-family: "Sankofa Display", sans-serif;
+  font-size: 20pt;
+  padding-right: 25px;
+
+  font-weight: bold;
+
+}
+
+#bulletin{
+  display: flex;
+  flex-direction: column;
+  
+  margin-left: -0.5%;
+  height: 100vh;
+  width: 35%;
+
+}
+#update{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: start;
+  margin-left: -0.5%;
+
+  height: 100%;
+  width: 100%;
+
+  background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
+  background-size: cover; 
+  background-color:hsla(35, 37%, 62%, 0.771);
+
+  /* outline-style:double;
+  outline-width: 10px;
+  outline-color: goldenrod;*/
+  border-radius: 2px; 
+  outline-style: double;
+  outline-width: 5px;
+
 }
 
 /* Fonts */
 .jacquarda-bastarda {
-    font-family: "Jacquarda Bastarda 9", serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Jacquarda Bastarda 9", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.sankofa-display-regular {
+  font-family: "Sankofa Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.jersey-15-regular {
+  font-family: "Jersey 15", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* footer & extra */
 button{
-    margin: 10px;
+  font-family: "Jersey 15", sans-serif;
+  margin: 5px;
 }
 /* CSS */
 .button-57 {
@@ -79,7 +167,7 @@ button{
   border-radius: 8px;
   color: black;
   display: inline-block;
-  font-size: 15px;
+  font-size: 15pt;
   line-height: 15px;
   padding: 18px 18px 17px;
   text-decoration: none;
@@ -131,9 +219,35 @@ button{
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 
-footer{
-    display: flex;
-    justify-content: center;
-    /* color:#ffd700 */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-content: center;
+}
+.dropdown-content {
+  display: none;
+  position:absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+
+  border-radius: 8px;
+  right: 0;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content button{
+  width:100%;
 }
 
+footer{
+  display: flex;
+  justify-content: center;
+  font-family: "Jersey 15", sans-serif;
+  font-size: x-large;
+  /* color:#ffd700 */
+}
