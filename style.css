@@ -5,7 +5,9 @@ body{
   background-repeat: no-repeat;
   background-size: 100% 100%;
   min-height: 100vh;
-
+  width: auto;
+ 
+  /* margin-right: -1%; */
   /* position:absolute; */
   /* float:right; */
   /* clip: rect(0, 100px, 200px, 100%); */
@@ -36,8 +38,12 @@ header{
   flex-direction: row;
   justify-content: space-between;
 
-  width: 100%;
+  /* max-width: 100%; */
   max-height:180px;
+
+  margin: -0.5%;
+  margin-bottom: 0%;
+  background-color: rgba(0, 0, 0, 0.2);
   
 }
 
@@ -54,12 +60,13 @@ hr{
 
 main{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: wrap;
-
-}
-main h1{
-  margin:10px;
+  
+  margin-top: 10px;
+  justify-content: space-between;
+  max-width: auto;
+  
 }
 
 /* man-made-horrors beyond my comprehension */
@@ -71,7 +78,7 @@ main h1{
 }
 .menu:hover{
   border-radius: 10px;
-  background-color: rgba(245, 245, 220, 0.599);
+  background-color: rgba(245, 245, 220, 0.4);
 }
 
 #titleText{
@@ -82,20 +89,23 @@ main h1{
   font-family: "Sankofa Display", sans-serif;
   font-size:50pt;
   width:50%;
+  padding-left:3%;
 }
 .leftSide{
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-items: center;
+  padding: 2%;
 }
 .rightSide{
   display: flex;
   flex-direction: row;
+  /* justify-content: end; */
 }
 #login{
   display: flex;
-  justify-items: space-evenly;
+  /* justify-items: space-evenly; */
   align-items: center;
   font-family: "Sankofa Display", sans-serif;
   font-size: 20pt;
@@ -105,36 +115,109 @@ main h1{
 
 }
 
-#bulletin{
+.container{
+  display: flex;
+  flex-direction: column;
+  min-height:25%;
+  margin : 0%;
+  margin-bottom:3%;
+  width:30%;
+}
+.bulletin{
   display: flex;
   flex-direction: column;
   
-  margin-left: -0.5%;
-  height: 100vh;
-  width: 35%;
+  /* max-height: 100vh; */
+  min-height: fit-content;
+  width: 100%;
+  
+  background-color:hsla(0, 0%, 0%, 0.5);
+  border-radius: 2px; 
+  /* outline-width: 5px; */
+}
+.bulletin img {
+  padding: 3%;
+}
 
+#news{
+  width:50%;
+}
+#lotto{
+  display: flex;
+  flex-direction: row;
+
+  height: fit-content;
+  width: auto;
+
+  background-size: cover;
+  background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
+  outline-style: double;
+  outline-width: 3px;
+  border-radius: 8px;
+
+  align-content: center;
+  justify-content: start;
+}
+#lotto img{
+  padding:3%;
+
+  height:140px;
+  width: 98px;
+}
+#lotto .textBox{
+  display: flex;
+  flex-direction: column;
+  padding:3%;
+  width:100%
+}
+#lotto text{
+  font-family: "Jersey 15", sans-serif;
+  font-size: x-large;
+  background-color: antiquewhite;
 }
 #update{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   align-content: start;
-  margin-left: -0.5%;
+  /* margin-left: -0.5%; */
 
   height: 100%;
   width: 100%;
 
-  background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
-  background-size: cover; 
-  background-color:hsla(35, 37%, 62%, 0.771);
-
+  /* background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
+  background-size: cover;  */
+  /* background-color:hsla(35, 37%, 62%, 0.771); */
   /* outline-style:double;
   outline-width: 10px;
   outline-color: goldenrod;*/
-  border-radius: 2px; 
-  outline-style: double;
-  outline-width: 5px;
+  /* border-radius: 2px;  */
+  /* outline-style: double; */
+  /* outline-width: 5px; */
+}
 
+.comicContain{
+  display: flex;
+  flex-direction: column;
+  background-color: antiquewhite;
+
+  justify-items: center;
+  align-items: center;
+
+  border-radius: 3px;
+  border-color: black;
+  border-width: 5px;
+  border-style: groove;
+
+  font-family: "Jersey 15", sans-serif;
+  padding:2%;
+  margin:5%;
+  
+}
+.comicContain img{
+  padding:2%;
+  height:140px;
+  width: 98px;
 }
 
 /* Fonts */
@@ -250,4 +333,5 @@ footer{
   font-family: "Jersey 15", sans-serif;
   font-size: x-large;
   /* color:#ffd700 */
+  width:auto;
 }

@@ -20,6 +20,7 @@
     <!--    <link rel = "java" href = "../src/Game"> c_opium-->
     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
     <script src = "script.js" ></script>
 </head>
 
@@ -50,19 +51,50 @@
          
     </header>
 
-    <hr style="height: 1%; border-width: 3px;color:rgb(216, 157, 9);background-color:gold">
+    <!-- <hr style="height: 1%; border-width: 3px;color:rgb(216, 157, 9);background-color:gold"> -->
     
     <main>
-        <div id = "bulletin">
+        <div class = "container">
             <h1><span>&#9820;</span>Bulletin</h1>
-            <div id = "update"></div>
+            <div class = "bulletin">
+                <div id = "update">
+                    <div class = "comicContain">
+                        <img src = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Icon_for_testing.png">
+                        <text id = "comTitle">Title</text>  
+                    </div>
+                </div>
+            </div>
         </div>
         
-        <div id = "chat"></div>
+        <div class = "container">
+            <h1><span>&#9820;</span>News</h1>
+            <div class = "bulletin">
+                <img src = "images/default-tweet-3.png">
+                <!-- <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Quick Technoblade sketches while my brain melts at 1 am<br><br>---Tags---<a href="https://twitter.com/hashtag/technosupport?src=hash&amp;ref_src=twsrc%5Etfw">#technosupport</a> <a href="https://twitter.com/hashtag/technobladefanart?src=hash&amp;ref_src=twsrc%5Etfw">#technobladefanart</a> <a href="https://twitter.com/hashtag/technoblade?src=hash&amp;ref_src=twsrc%5Etfw">#technoblade</a> <a href="https://twitter.com/hashtag/sketch?src=hash&amp;ref_src=twsrc%5Etfw">#sketch</a> <a href="https://twitter.com/hashtag/sketchbook?src=hash&amp;ref_src=twsrc%5Etfw">#sketchbook</a> <a href="https://twitter.com/hashtag/pencildrawing?src=hash&amp;ref_src=twsrc%5Etfw">#pencildrawing</a> <a href="https://twitter.com/hashtag/art?src=hash&amp;ref_src=twsrc%5Etfw">#art</a> <a href="https://twitter.com/hashtag/mcyt?src=hash&amp;ref_src=twsrc%5Etfw">#mcyt</a> <a href="https://t.co/0tl3CflyDi">https://t.co/0tl3CflyDi</a></p>&mdash; Prof.CluckCluck (@profCluckCluck) <a href="https://twitter.com/profCluckCluck/status/1527154386627186688?ref_src=twsrc%5Etfw">May 19, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> -->
+            </div>
+        </div>
+        
+        <div class = "container">
+            <h1><span>&#9820;</span>Lottery</h1>
+            <div id = "lotto">
+                <img src = "https://upload.wikimedia.org/wikipedia/commons/c/ce/Icon_for_testing.png">
+                <div class = "textBox">
+                    <text id = "comicTitle" style="font-weight: bolder;">Title</text>
+                    <text id = "comicSum">Summary</text>
+                </div>
+            </div>    
+            
+            <h1><span>&#9820;</span>Discussion</h1>
+            <div class = "bulletin" >
+                <img src = "images/afca06dfc1d218a5732382248790242c.jpg">
+                <div id = "chat"></div>
+            </div>  
+        </div>
+        
     </main>
 
     
-    <hr style="height: 1%; border-width: 3px;color:rgb(216, 157, 9);background-color:gold">
+    <!-- <hr style="height: 1%; border-width: 3px;color:rgb(216, 157, 9);background-color:gold"> -->
 </body>
 <footer>
     ©GuardComics 2024
