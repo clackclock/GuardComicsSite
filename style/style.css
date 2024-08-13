@@ -1,6 +1,6 @@
 body{
   /* background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg"); */
-  background-image: url("images/image-from-rawpixel-id-11068331-jpeg.jpg");
+  background-image: url("../images/image-id-11068331-jpeg.jpg");
   background-color: bisque;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -122,6 +122,7 @@ main{
   margin : 0%;
   margin-bottom:3%;
   width:30%;
+  justify-content: safe;
 }
 .bulletin{
   display: flex;
@@ -150,7 +151,7 @@ main{
   width: auto;
 
   background-size: cover;
-  background-image: url("images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
+  background-image: url("../images/Ancient-Castle-Stone-Wall-PhotosPublic02.jpg");
   outline-style: double;
   outline-width: 3px;
   border-radius: 8px;
