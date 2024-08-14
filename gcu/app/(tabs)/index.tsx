@@ -4,6 +4,7 @@ import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { View } from 'react-native';
 
 export default function HomeScreen() {
   return (
@@ -11,15 +12,27 @@ export default function HomeScreen() {
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
       headerImage={
         <Image
-          source={require('@/assets/images/partial-react-logo.png')}
-          style={styles.reactLogo}
+          source={require('@/assets/images/image-id-11068331-jpeg.jpg')}
+          style={styles.castleBack}
         />
       }>
-      <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Welcome!</ThemedText>
-        <HelloWave />
-      </ThemedView>
-      <ThemedView style={styles.stepContainer}>
+        
+        <ThemedView style={styles.generalContainer}>
+          <ThemedText type="title">Welcome?</ThemedText>
+          <HelloWave />
+        </ThemedView>
+
+        <View style={styles.generalContainer}>
+          <ThemedText type="title">News</ThemedText>
+        </View>
+
+        <ThemedView style={styles.generalContainer}>
+          <ThemedText type="title">Lotto</ThemedText>
+          <ThemedText type="title">Discuss</ThemedText>
+        </ThemedView>
+      
+
+      {/* <ThemedView style={styles.stepContainer}>
         <ThemedText type="subtitle">Step 1: Try it</ThemedText>
         <ThemedText>
           Edit <ThemedText type="defaultSemiBold">app/(tabs)/index.tsx</ThemedText> to see changes.
@@ -45,12 +58,23 @@ export default function HomeScreen() {
           <ThemedText type="defaultSemiBold">app</ThemedText> to{' '}
           <ThemedText type="defaultSemiBold">app-example</ThemedText>.
         </ThemedText>
-      </ThemedView>
+      </ThemedView> */}
+
     </ParallaxScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  mainBox:{
+    flexDirection:'row',
+    alignItems: 'center',
+    rowGap: 5,
+  },
+  generalContainer:{
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    gap: 8,
+  },
   titleContainer: {
     flexDirection: 'row',
     alignItems: 'center',
@@ -60,11 +84,11 @@ const styles = StyleSheet.create({
     gap: 8,
     marginBottom: 8,
   },
-  reactLogo: {
-    height: 178,
-    width: 290,
+  castleBack: {
+    height: '100%',
+    width: '100%',
     bottom: 0,
     left: 0,
-    position: 'absolute',
+    position: 'relative',
   },
 });
