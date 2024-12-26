@@ -3,10 +3,10 @@
   "name": "guardcomics",
   "main": "expo-router/entry",
   "version": "1.0.0",
-  "homepage": "https://clackclock.github.io/GuardComicsSite",
+  "homepage": "https://clackclock.github.io/GuardComicsSite/guardcomics",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
   
     "start": "expo start",
     "reset-project": "node ./scripts/reset-project.js",
