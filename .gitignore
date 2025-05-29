@@ -3,7 +3,7 @@ package-lock.json
 package.json
 
 
-index.html
-images/*
+
+images/
 scripts/*
 style/*
