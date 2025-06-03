@@ -165,3 +165,10 @@ header{
 .menu.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
+
+#Artisan{
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 2rem;
+}
