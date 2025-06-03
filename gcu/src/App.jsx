@@ -4,7 +4,6 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import placeHolder from "https://upload.wikimedia.org/wikipedia/commons/d/db/MenuResp.png";
-import ph from "../src/assets/orionthemes-placeholder-image-2";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -33,7 +32,7 @@ function App() {
 
       <div itemID = "Artisan">
         <div className='booklet'>
-          <img src={ph} alt="booklet cover"/>
+          {/* <img src= alt="booklet cover"/> */}
           <a className='title'></a>
         </div>
       </div>
