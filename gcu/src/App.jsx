@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-import placeHolder from "https://upload.wikimedia.org/wikipedia/commons/d/db/MenuResp.png";
+// import placeHolder from "https://upload.wikimedia.org/wikipedia/commons/d/db/MenuResp.png"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +19,7 @@ function App() {
         <div id = "title">GUARD COMICS</div>
 
         <div className = "dropdown">
-          <img className ="menu" src = {placeHolder} alt="empty" width = "60px" height = "60px" />
+          <img className ="menu" src ="https://upload.wikimedia.org/wikipedia/commons/d/db/MenuResp.png"  alt="empty" width = "60px" height = "60px" />
           <div className = "dropdown-content">
             <button className="button-57" role="button"><span class="text">Artisans' Quarters</span><span>Comic List</span></button>
             <button className="button-57" role="button"><span class="text">Town Bulletin</span><span>Latest Updates</span></button>
@@ -30,10 +30,17 @@ function App() {
         </div>
       </header>
 
-      <div itemID = "Artisan">
-        <div className='booklet'>
-          {/* <img src= alt="booklet cover"/> */}
-          <a className='title'></a>
+      <div ID = "Artisan">
+        <h3>NEW RELEASES</h3>
+        < div ID='alley'>
+          <div className='booklet'>
+            <img className = "coverIMG" src="./src/assets/Chess_knight.png" alt="booklet cover" height="90px"/>
+            <a className='title'>TITLE</a>
+          </div>
+          <div className='booklet'>
+            <img className = "coverIMG" src="./src/assets/Chess_knight.png" alt="booklet cover" height="90px"/>
+            <a className='title'>TITLE</a>
+          </div>
         </div>
       </div>
 
