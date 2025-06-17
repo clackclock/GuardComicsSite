@@ -175,10 +175,15 @@ header{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
+  max-width: 50%;
   margin:0 auto;
   padding:1rem;
   overflow-x: hidden;
+  overflow-block: hidden;
   
+}
+#alley:hover{
+  overflow-x: scroll;
 }
 .booklet{
   display: flex;
@@ -199,4 +204,13 @@ header{
 .booklet img{
   height: 90px;
   width: auto;
+}
+
+/* READER.CSS */
+#comicImgs{
+  display: flex;
+  max-width: 1280px;
+  /* margin: 0 auto;
+  padding: 2rem; */
+  align-content: center;
 }
