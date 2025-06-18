@@ -13,8 +13,8 @@ const Gallery = () => {
       <main>
             {items.map((item, index) => (
                 <div key={index} className="booklet">
-                    <img className = "coverIMG" src={knight} alt="booklet cover" height="90px"/>
-                    <a className='title'>{item}</a>
+                  <img className = "coverIMG" src={knight} alt="booklet cover" height="90px"/>
+                  <a className='title'>{item}</a>
                 </div>
             ))}
       </main>
