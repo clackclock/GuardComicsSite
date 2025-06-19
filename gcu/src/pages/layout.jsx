@@ -16,13 +16,13 @@ const Layout = () => {
             <div className = "dropdown-content">
               <ul>
                 <li>
-                  <button><Link to="/">Home</Link></button>
+                  <button><Link to="GuardComicsSite/">Home</Link></button>
                 </li>
                 <li>
-                  <button><Link to="/gallery">Gallery</Link></button>
+                  <button><Link to="GuardComicsSite/gallery">Gallery</Link></button>
                 </li>
                 <li>
-                  <button><Link to="/contact">Contact</Link></button>
+                  <button><Link to="GuardComicsSite/contact">Contact</Link></button>
                 </li>
               </ul>
               {/* <button className="button-57" role="button"><span className="text">Artisans' Quarters</span><span>Comic List</span></button>
