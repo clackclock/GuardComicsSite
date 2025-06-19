@@ -167,7 +167,8 @@ header{
   z-index: 1;
   
   border-radius: 8px;
-  right: 0;
+  /* right: 0; */
+  alignment-baseline: middle;
 }
 .dropdown:hover .dropdown-content {
   display: block;
