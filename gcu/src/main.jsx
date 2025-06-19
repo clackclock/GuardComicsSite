@@ -23,7 +23,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="GuardComicsSite/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="gallery" element={<Gallery />}/>
           <Route path="contact" element={<Contact />} />
