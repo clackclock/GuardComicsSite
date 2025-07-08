@@ -226,6 +226,16 @@ header{
   width: auto;
 }
 
+.newComic{
+  display:block;
+  justify-content: center;
+  background-color: #242424;
+}
+.updateComic{
+  display:none;
+}
+
+
 /* READER.CSS */
 #comicImgs{
   display: flex;
