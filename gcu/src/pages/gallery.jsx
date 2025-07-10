@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../App.css'
 import knight from '../assets/Chess_knight.png'
 
@@ -8,48 +8,39 @@ const Gallery = () => {
   const addBook = () => {
     setItems([...items, `Issue ${items.length + 1}`]); //replace this with book title
   };
-
   const [showContent, setShowContent] = useState(true);
   const newBookMenu = () => {
     setShowContent(!showContent);
   };
 
-  const [selectedFiles, setSelectedFiles] = useState([]);
-  const handleFileChange = (event) => {
-    // `event.target.files` is a FileList object, NOT an array.
-    // Convert it to an array for easier manipulation.
-    const filesArray = Array.from(event.target.files);
-    setSelectedFiles(filesArray);
-  };
-  const handleFolderChange = (event) => {
-    const files = event.target.files;
-    setSelectedFiles(Array.from(files)); // Convert FileList to an array
-  };
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (selectedFiles.length > 0) {
-      // send the files to a server using FormData
-      const formData = new FormData();
-      selectedFiles.forEach((file) => {
-        formData.append('Archive', file); // 'files' is the field name your server expects
-      });
+  const [folderCount, setFolderCount] = useState(null);
+  const [error, setError] = useState(null);
 
-      //sending with fetch:
-      fetch('/upload', {
-        method: 'POST',
-        body: formData,
-      })
-      .then(response => response.json())
-      .then(data => console.log('Upload success:', data))
-      .catch(error => console.error('Upload error:', error));
+  useEffect(() => {
+    const fetchFolderCount = async () => {
+      try {
+        const response = await fetch('http://localhost:5000/api/folder-count'); // Replace with your API endpoint
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setFolderCount(data.count);
+      } catch (err) {
+        setError(err.message);
+      }
+    };
 
-      console.log('Files to upload:', selectedFiles.map(file => file.name));
-      addBook();
-    } else {
-      console.log('No files selected.');
-    }
-  };
+    fetchFolderCount();
+  }, []);
 
+  if (error) {
+    return <div>Error: {error}</div>;
+  }
+  if (folderCount === null) {
+    return <div>Loading folder count...</div>;
+  }
+
+  
   return <div className="fullscreen-bg"> 
     <>
       <main>
@@ -60,30 +51,9 @@ const Gallery = () => {
           </div>
         ))}
       </main>
-      <button onClick={() => newBookMenu()}>+New Comic</button>
-      {showContent && (
-        <div className="newComic">
-          <form onSubmit={handleSubmit}>
-            TITLE:
-            <input type="text"></input>
-            <input type="file" multiple webkitdirectory="true" directory="true" onChange={handleFolderChange} />
-            <button type="submit" onClick={addBook}>Upload Folder</button>
-            {selectedFiles.length > 0 && (
-              <div>
-                <h4>Selected Files:</h4>
-                <ul>
-                  {selectedFiles.map((file, index) => (
-                    // <li key={index}>{file.name}</li>
-                    <li key={index}>{file.webkitRelativePath || file.name}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          </form>
-        </div>
-      )}
 
-      <div className="updateComic"></div>
+      <h1>Number of folders: {folderCount}</h1>
+      <button>Click</button>
     </>
   </div>;
   

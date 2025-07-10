@@ -14,17 +14,17 @@ const Layout = () => {
           <div className = "dropdown">
             <img className ="menu" src ="https://upload.wikimedia.org/wikipedia/commons/d/db/MenuResp.png"  alt="empty" width = "60px" height = "60px" />
             <div className = "dropdown-content">
-              <ul>
-                <li>
+              {/* <ul>
+                <li> */}
                   <button><Link to="./">Home</Link></button>
-                </li>
-                <li>
+                {/* </li>
+                <li> */}
                   <button><Link to="./gallery">Gallery</Link></button>
-                </li>
-                <li>
+                {/* </li>
+                <li> */}
                   <button><Link to="./contact">Contact</Link></button>
-                </li>
-              </ul>
+                {/* </li>
+              </ul> */}
               {/* <button className="button-57" role="button"><span className="text">Artisans' Quarters</span><span>Comic List</span></button>
               <button className="button-57" role="button"><span className="text">Town Bulletin</span><span>Latest Updates</span></button>
               <button className="button-57" role="button"><span class="text">Spring Gala</span><span>New Comics</span></button>
