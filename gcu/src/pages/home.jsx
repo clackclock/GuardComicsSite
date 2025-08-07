@@ -7,6 +7,7 @@ function Home(){
 
   return <div className="fullscreen-bg"> 
     <>
+      <meta name="google-site-verification" content="-T1OVUHYGlM7v4TnkETnn352xZwnhqwtTUIV7L5JpOo" />
       <div id="News">
         <h3>DAILY REPORT</h3>
         <div className='reportText'>REPORTS OF DEADLY BEARS</div>
