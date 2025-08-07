@@ -3,7 +3,7 @@ import '../App.css'
 // import knight from '../assets/Chess_knight.png'
 
 function Home(){
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
   const [newestFile, setNewestFile] = useState(null);
   const [error, setError] = useState(null);
 
@@ -59,7 +59,7 @@ function Home(){
   };
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="fullscreen-bg"><div><h1>Error: {error}</h1></div><button onClick={() => setCount((count) => count + 1)}>count is {count}</button></div>;
   }
   if (!newestFile) {
     return <div>Loading newest file...</div>;

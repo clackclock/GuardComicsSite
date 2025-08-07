@@ -5,6 +5,7 @@ const Gallery = () => {
   // Use a single state to store the list of files and handle loading/errors
   const [files, setFiles] = useState(null); // Initialize with null to distinguish from an empty array
   const [error, setError] = useState(null);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const fetchFiles = async () => {
@@ -60,7 +61,7 @@ const Gallery = () => {
 
   // --- Conditional Rendering for Loading, Error, and Content ---
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="fullscreen-bg"><div><h1>Error: {error}</h1></div><button onClick={() => setCount((count) => count + 1)}>count is {count}</button></div>;
   }
   if (files === null) {
     return <div>Loading files...</div>;
@@ -79,7 +80,7 @@ const Gallery = () => {
         )}
       </main>
       <h1>Number of files: {fileCount}</h1>
-      <button>Click</button>
+      <button>YOP</button>
     </div>
   );
 };
