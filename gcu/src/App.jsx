@@ -5,14 +5,10 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-  const ranComic= {
-  }
-
   const [items, setItems] = useState([]); //'Item 1', 'Item 2'
   const addBook = () => {
     setItems([...items, `Item ${items.length + 1}`]); //replace this with book title
   };
-
   const makeBooklet = () =>{
     // return <div className='booklet'>Title</div>
     // return React.createElement('div',{className:'booklet'},"title");
