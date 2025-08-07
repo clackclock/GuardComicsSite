@@ -8,6 +8,7 @@ const Layout = () => {
     <>
       <nav>
         <header>
+          <meta name="google-site-verification" content="-T1OVUHYGlM7v4TnkETnn352xZwnhqwtTUIV7L5JpOo" />
           <img className = "logo" src ={ph} alt = "gc_logo" height = "150px"/>
           <div id = "title">GUARD COMICS</div>
 
