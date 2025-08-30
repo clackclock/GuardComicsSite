@@ -59,7 +59,16 @@ function Home(){
   };
 
   if (error) {
-    return <div className="fullscreen-bg"><div><h1>Error: {error}</h1></div><button onClick={() => setCount((count) => count + 1)}>count is {count}</button></div>;
+    return <div className="fullscreen-bg">
+      <div>
+        <h1>Error: {error}</h1>
+      </div>
+      <div id="News">
+        <h3>DAILY REPORT</h3>
+        <div className='reportText'>REPORTS OF DEADLY BEARS</div>
+      </div>
+      <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
+    </div>;
   }
   if (!newestFile) {
     return <div>Loading newest file...</div>;
