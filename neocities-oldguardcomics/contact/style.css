@@ -1,0 +1,36 @@
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+    align-items: flex-end; 
+    margin-top: 1rem;
+    margin-bottom:1rem;
+    padding-right: 0.3rem;
+}
+
+.creator-profile{
+  padding:1rem;
+}
+.creator-profiles-container {
+  display: flex;
+  flex-wrap: wrap;
+  /*justify-content: center;*/
+  gap: 40px;
+  padding: 20px;
+}
+.social-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.creator-profile h1{
+  font-family: "Jersey 15", sans-serif;
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+}
+
+ul{
+  font-family: "Jersey 15", sans-serif; 
+  margin-block-start: .3em;
+  margin-block-end: .3em;
+}

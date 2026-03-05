@@ -1,0 +1,66 @@
+main{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-height: 70%;
+    overflow-y:visible;
+}
+.header-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    align-items: flex-end; 
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+/* Style the tab */
+.tab {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f16e;
+  margin-bottom: 0%;
+}
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  /*padding: 14px 16px;*/
+  transition: 0.3s;
+  flex-grow: 1;
+  background-color: #f8d6d2;
+  color: black;
+  font-family: "Sankofa Display", sans-serif;
+  font-size: larger;
+  max-width: fit-content;
+}
+button{
+  border-radius:0rem;
+  box-shadow:inherit;
+}
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: black;
+  color: white;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 70%;
+  /*overflow-y: scroll;*/
+  border-top: none;
+  
+}
