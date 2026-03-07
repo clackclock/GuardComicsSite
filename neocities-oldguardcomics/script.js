@@ -91,7 +91,6 @@ document.addEventListener('DOMContentLoaded', () => {
             data-filename="${file.fileName}" 
             data-extension="${fileExtension}">
             ${iconHtml}
-            <h3 class="text-sm font-bold mt-2 text-gray-800 truncate">${file.fileName}</h3>
             <p class="text-xs text-indigo-600">${previewText}</p>
         </div>`;
     };

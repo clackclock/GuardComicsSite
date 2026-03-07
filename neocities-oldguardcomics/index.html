@@ -1,92 +1,10 @@
-<!--<!DOCTYPE html>-->
-<!--<html>-->
-<!--  <head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-<!--    <title>Old Guard Comics</title>-->
-<!--     <link rel="icon" type="image/svg+xml" href="images/Chess_knight.png" />-->
-    <!--fonts-->
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Jacquarda+Bastarda+9&display=swap" rel="stylesheet">-->
-    
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Sankofa+Display&display=swap" rel="stylesheet">-->
-    <!--links-->
-<!--    <link href="/style.css" rel="stylesheet" type="text/css" media="all">-->
-    <!--Scripts-->
-<!--    <script src="script.js"></script>-->
-<!--  </head>-->
-<!--  <body>-->
-<!--    <header>-->
-<!--        <div class="leftSide">-->
-<!--            <img class="logo" src="images/guardLogo.png" height="150px">-->
-<!--            <div id="titleText">OLD GUARD COMICS</div>-->
-<!--        </div>-->
-<!--        <div class="header-menu">-->
-<!--            <a href="/gallery"><button class="button-57" role="button"><span class="text">Artisans' Alley</span><span>Gallery/Uploads</span></button></a>-->
-<!--            <a href="/contact"><button class="button-57" role="button"><span class="text">King's Office</span><span>Contacts + Info </span></button></a>-->
-<!--            <a href="/"><button class="button-57" role="button"><span class="text">Gates</span><span>Home</span></button></a>-->
-<!--        </div>-->
-<!--    </header>-->
-<!--    <h1>Welcome to OGC, Home of the GCU!</h1>-->
-
-<!--    <div class="main-content-wrapper">-->
-<!--        <div class="left-column">-->
-<!--            <div id="News" class="news-section">-->
-<!--                <h1>DAILY REPORT</h1>-->
-<!--                <div class='reportText'>REPORTS OF DEADLY BEARS</div>-->
-<!--                <div class='reportText'>The end times are here. You thought a woman choosing a bear was bad, now we got bears actively making the choice for them. More @11</div>-->
-<!--                <div class='reportText'>for further updates vist our <a href="https://www.tumblr.com/ogc-tblr-archive">update/archive channel</a></div>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="right-column">-->
-<!--            <h1 class="gallery-title">-->
-<!--                <a href="/gallery">Gallery</a>-->
-<!--            </h1>-->
-<!--            <div id="file-display" class="file-container">-->
-                <!-- JavaScript -->
-<!--                <p class="w-full text-center">Loading newest file...</p>-->
-<!--                <button id="counter-button" class="mt-8">Next 0 </button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--        <div class="links-column">-->
-<!--            <h1>Links</h1>-->
-<!--            <ul>-->
-<!--                <li><a href="/store">Marketplace</a></li>-->
-<!--                <li><a href="/characters">Champions</a></li>-->
-<!--                <li><a href="/about">Castle Grounds</a></li>-->
-<!--                <li><a href="/faq">The Royal Decree</a></li>-->
-<!--            </ul>-->
-<!--        </div>-->
-<!--    </div>-->
-    
-    <!-- Modal/Lightbox Structure -->
-<!--    <div id="file-modal" class="modal hidden" aria-modal="true" role="dialog">-->
-<!--        <div class="modal-content">-->
-<!--            <span class="close-button" id="close-modal-button">&times;</span>-->
-<!--            <div id="modal-title"></div>-->
-<!--            <div id="modal-body">-->
-                <!-- Content (Image/PDF) will be injected here -->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </div>-->
-    
-<!--    <footer>-->
-<!--      <img src="/neocities.png" alt="Site hosted by Neocities">-->
-<!--      <p><a href="/contact">Contacts</a></p>-->
-<!--      <p>©GuardComics 2024</p>-->
-<!--    </footer>-->
-<!--  </body>-->
-<!--</html>-->
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Old Guard Comics</title>
-    <link rel="icon" type="image/svg+xml" href="images/Chess_knight.png" />
+    <link rel="icon" type="image/svg+xml" href="images/guardLogo.png" />
 
     <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -101,354 +19,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Jersey+15&family=Sankofa+Display&display=swap" rel="stylesheet">
     
     <!--links-->
-    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
 
-    <style>
-        header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          z-index: 50;
-          min-height: 155px;
-          max-width: 100vw;
-          overflow: hidden;
-          box-sizing: border-box;
-          background-color: rgba(0, 0, 0, 0.2);
-          padding: 0 0.6rem;
-        }
-        /* man-made-horrors beyond my comprehension */
-          .header-menu {
-            display: flex;
-            flex-direction: column; /* Forced to be a column */
-            gap: 5px;
-            align-items: center;
-            margin-top: 1rem;
-            padding-right: 1rem;
-            font-weight:bold;
-        }
-        
-        #titleText{
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          font-family: 'Courier New', Courier, monospace;
-          font-size:36pt;
-          /*width:50%;*/
-          /*padding-left:3%;*/
-        }
-        .leftSide{
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          width:416px;
-          /*padding: 1.25%;*/
-          margin-right: 1.5%;
-        }
-        
-        
-        h1 {
-            font-family: "Sankofa Display", sans-serif;
-            color: black; /* White text for the welcome banner */
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-            padding: 1rem;
-            text-align: start;
-            font-size: 2rem; /*standard*/
-        }
-        
-        .news-section h1, .links-column h1, .right-column h1 {
-            color: #1f2937; /* Dark text for sections */
-            text-shadow: none;
-            font-size: 2rem; /* Standardized size */
-            font-family: "Jacquarda Bastarda 9", serif;
-            margin: 0 0 0.5rem 0;
-            padding: 0;
-            text-align: left;
-        }
-
-        .logo{ 
-          height:10em;
-        }
-
-        @media (max-width: 768px) {
-            /* Since the general h1 is 2rem now, we only need to adjust titleText here */
-            #titleText {
-                font-size: 3.88rem;
-            }
-            .logo {
-                max-width: none;
-                height: 170px;
-            }
-        }
-          
-        /* Main Content Layout */
-        .main-content-wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 1rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 2rem;
-        }
-        @media (min-width: 768px) {
-            .main-content-wrapper {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .left-column {
-                width: 300px;
-                flex-shrink: 0;
-            }
-            .right-column {
-                flex-grow: 1;
-            }
-        }
-
-        /* News and Links Columns */
-        .left-column {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            width: 100%;
-            max-width: 400px;
-        }
-        .links-column{
-          display: flex;
-          flex-direction: column;
-          width: 100%;
-          max-width: 400px;
-        }
-        .news-section, .links-column {
-            max-height: 400px;
-            overflow-y:auto;
-            padding: 1rem;
-            border-radius: 1rem;
-            text-align: left;
-            background-color: rgba(243, 244, 246, 0.85);
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-        }
-        .news-section h1 {
-            color: #1f2937;
-            text-shadow: none;
-            font-size: 1.5rem;
-            font-family: "Jacquarda Bastarda 9", serif;
-            margin: 0 0 0.5rem 0;
-            padding: 0;
-            text-align: left;
-        }
-        .links-column h1 {
-          color: #1f2937;
-            text-shadow: none;
-            /*font-size: 1.5rem;*/
-            font-family: "Jacquarda Bastarda 9", serif;
-            margin: 0 0 0.5rem 0;
-            padding: 0;
-            text-align: left;
-        }
-        .reportText {
-            font-family: "Jersey 15", sans-serif;
-            font-size: 1rem;
-            color: #4b5563;
-        }
-        .links-column ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        .links-column a {
-            font-family: "Jersey 15", sans-serif;
-            font-size: 2.2rem;
-            color: #4b5563;
-            text-decoration: none;
-            display: block;
-            line-height: 1.2;
-        }
-        .links-column a:hover {
-            text-decoration: underline;
-            color: #4f46e5;
-        }
-        .links-column {
-            display: flex;
-        }
-        @media (min-width: 1024px) {
-            .links-column {
-                display: flex;
-                max-width: 250px;
-                flex-shrink: 0;
-            }
-            .left-column {
-                max-width: 300px;
-            }
-        }
-
-        /* File Display/Gallery Section */
-        .right-column {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 1.5rem;
-            background-color: rgba(255, 255, 255, 0.8);
-            border-radius: 1rem;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-        .gallery-title a {
-            color: #4f46e5;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .gallery-title a:hover {
-            text-decoration: underline;
-            color: #3b82f6;
-        }
-        .file-container {
-            padding: 0.5rem;
-            width: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: stretch;
-            gap: 1.5rem;
-        }
-        
-        .file-card {
-            flex: 1 1 200px;
-            box-sizing: border-box;
-            text-align: center;
-            height: 340px; /* Fixed height for the card container */
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            transition: all 0.3s;
-            cursor: pointer;
-            padding: 1rem;
-        }
-
-        .file-card img, .file-card svg {
-            /* Set max height to 250px for all visual elements inside the card */
-            max-height: 250px; 
-            width: auto; /* Ensures proportional scaling based on height limit */
-            object-fit: contain; /* Ensures the whole image is visible */
-            margin-bottom: 0.5rem;
-        }
-        
-        /* Modal/Lightbox Styles */
-        .modal {
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            transition: opacity 0.3s ease;
-        }
-        .modal.hidden {
-            display: none;
-            opacity: 0;
-        }
-        .modal-content {
-            background-color: rgba(0, 0, 0, 0.6);
-            border-radius: 1rem;
-            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
-            width: 95%;
-            max-width: 1200px;
-            height: 95%;
-            max-height: 95vh;
-            overflow: hidden;
-            position: relative;
-            display: flex;
-            flex-direction: column;
-        }
-        #modal-title {
-            padding: 10px 20px;
-            font-size: 1.5rem;
-            font-weight: 600;
-            background-color: #e5e7eb;
-            border-top-left-radius: 1rem;
-            border-top-right-radius: 1rem;
-            color: #1f2937;
-            text-align: center;
-        }
-        #modal-body {
-            flex-grow: 1;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            overflow: auto;
-        }
-        #modal-body img {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            border-radius: 0.75rem;
-        }
-        #modal-body embed {
-            width: 100%;
-            height: 100%;
-            min-height: 500px;
-        }
-        .close-button {
-            color: #4b5563;
-            position: absolute;
-            top: 5px;
-            right: 15px;
-            font-size: 36px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 1001;
-            line-height: 1;
-            transition: color 0.2s;
-        }
-        .close-button:hover,
-        .close-button:focus {
-            color: #ef4444;
-            transform: scale(1.1);
-        }
-        
-        /* Fonts */
-        .jacquarda-bastarda {
-          font-family: "Jacquarda Bastarda 9", serif;
-          font-weight: 400;
-          font-style: normal;
-        }
-        .sankofa-display-regular {
-          font-family: "Sankofa Display", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-        }
-        .jersey-15-regular {
-          font-family: "Jersey 15", sans-serif;
-          font-weight: 400;
-          font-style: normal;
-        }
-
-        /* Footer Styles */
-        footer {
-          display: flex;
-          justify-content: flex-start;
-          flex-direction: column;
-          font-family: "Jersey 15", sans-serif;
-          font-size: x-large;
-          width: auto;
-          text-align: start;
-          padding: 1rem;
-          margin-top: 2rem;
-          color: white;
-          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.9);
-        }
-        footer img{
-          width:180px;
-          height: 50px;
-          object-fit: contain;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -459,32 +31,28 @@
         <div class="header-menu">
             <a href="/gallery" aria-label="Gallery/Uploads" class="button-57" role="button"><span class="text">Artisans' Alley</span><span>Gallery/Uploads</span></a>
             <a href="/contact" aria-label="Contacts + Info" class="button-57" role="button"><span class="text">King's Office</span><span>Contacts + Info </span></a>
-            <a href="/" aria-label="Home" class="button-57" role="button"><span class="text">Gates</span><span>Home</span></a>
+            <a href="/" aria-label="Home" class="button-57" role="button"><span class="text">Gatehouse</span><span>Home</span></a>
+        </div>
+        <!-- Center Column: Gallery/File Display -->
+        <div class="right-column">
+            <div id="file-display" class="file-container">
+                <!--JavaScript -->
+                <p class="w-full text-center">Loading newest file...</p> 
+                <button id="counter-button" class="mt-8">&#10151;</button>
+            </div>
         </div>
     </header>
 
-        <h1 style="font-size: 2rem; font-weight: 900;">Welcome to OGC, Home of the GCU!</h1>
+    <!-- <h1 style="font-size: 2rem; font-weight: 900;">Welcome to OGC, Home of the GCU!</h1> -->
 
     <div class="main-content-wrapper">
-      <div class="left-column">
-            <div id="News" class="news-section">
-                <h1><a href="https://www.tumblr.com/ogc-tblr-archive">DAILY REPORT</a></h1>
-                <div class='reportText'>REPORTS OF DEADLY BEARS: Man VS Bear Comeback Debate?</div>
-                <div class='reportText'>The end times are here. A once simply hilarious and male ego-shattering choice has been turned on it's head with the a switch up from the option you would've never expected to hear anything from. You thought a woman choosing a bear was bad, now we got bears actively making the choice for them. During this year's Fat Bear Contest, Rangers lost sight of the favorite to win, Jiggle Fysics, 2-3 weeks into the compeition, worrying onlookers about his chances as he had begun to fall behind his closest rival, Big Back Billy. Towards the tailend of the 3rd weeks sightings of Jiggle began to pick up again in the most unlikly of places. King Salmon, Alaska, sitting 290 even air miles away from the Kitami Park Reserve had recently been devastated by a series of missing persons' cases and brutal murders. The reports show that officers have traced the remains back to a den with a Jiggle Fysics 100 lbs heavier than we last saw him. Rangers are still trying to sort out the specifics on the How and Why. More @11</div>
-                <div class='reportText'>For further updates vist our <a href="https://www.tumblr.com/ogc-tblr-archive" class="text-indigo-600 hover:text-indigo-800 underline">update/archive channel</a></div>
-            </div>
-      </div>
-        
-        <!-- Center Column: Gallery/File Display -->
-        <div class="right-column">
-            <h1 class="gallery-title">
-                <a href="/gallery">Gallery</a>
-            </h1>
-            <div id="file-display" class="file-container">
-                <!--JavaScript -->
-                <p class="w-full text-center">Loading newest file...</p>
-                <button id="counter-button" class="mt-8">Next 0</button>
-            </div>
+        <div class="left-column">
+                <div id="News" class="news-section">
+                    <h1><a href="https://www.tumblr.com/ogc-tblr-archive">DAILY REPORT</a></h1>
+                    <div class='reportText'>REPORTS OF DEADLY BEARS: Man VS Bear Comeback Debate?</div>
+                    <div class='reportText'>The end times are here. A once simply hilarious and male ego-shattering choice has been turned on it's head with the a switch up from the option you would've never expected to hear anything from. You thought a woman choosing a bear was bad, now we got bears actively making the choice for them. During this year's Fat Bear Contest, Rangers lost sight of the favorite to win, Jiggle Fysics, 2-3 weeks into the compeition, worrying onlookers about his chances as he had begun to fall behind his closest rival, Big Back Billy. Towards the tailend of the 3rd weeks sightings of Jiggle began to pick up again in the most unlikly of places. King Salmon, Alaska, sitting 290 even air miles away from the Kitami Park Reserve had recently been devastated by a series of missing persons' cases and brutal murders. The reports show that officers have traced the remains back to a den with a Jiggle Fysics 100 lbs heavier than we last saw him. Rangers are still trying to sort out the specifics on the How and Why. More @11</div>
+                    <div class='reportText'>For further updates vist our <a href="https://www.tumblr.com/ogc-tblr-archive" class="text-indigo-600 hover:text-indigo-800 underline">update/archive channel</a></div>
+                </div>
         </div>
         
         <!-- Right Column: Links -->
@@ -500,9 +68,9 @@
     </div>
 
     <footer>
-        <img src="/neocities.png" alt="Site hosted by Neocities">
+        <img src="neocities.png" alt="Site hosted by Neocities">
         <p><a href="/contact" class="text-white-600 hover:text-indigo-800 underline">Contacts</a></p>
-        <p>©GuardComics 2024</p>
+        <p>©GuardComics 2026</p>
     </footer>
 
     <!-- Modal/Lightbox Structure -->
@@ -536,7 +104,7 @@
               { fileName: 'smoke_bubble_characterSheet.jpg', fileUrl: '/_archive/smoke_bubble_characterSheet.jpg' },
               { fileName: 'trishca_concept.jpg', fileUrl: '/_archive/trishca_concept.jpg' },
               
-              { fileName: 'Document-1.pdf', fileUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+              // { fileName: 'Document-1.pdf', fileUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
               // { fileName: 'Unsupported-file.txt', fileUrl: 'somefile.txt' }
             ];
 
@@ -588,7 +156,7 @@
 
             const createFileCard = (file) => {
                 const fileExtension = file.fileName.split('.').pop().toLowerCase();
-                let previewText = 'Click to View';
+                let previewText = 'View Preview';
                 let iconHtml = '';
                 
                 // Common attributes for image protection
@@ -597,27 +165,23 @@
                 if (fileExtension === 'pdf') {
                     // PDF Icon (now scales up to 250px max height)
                     iconHtml = '<svg class="text-red-600 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 18H8v-2h8v2zm0-4H8v-2h8v2zm-2-4V9h-3V4.5L14.5 9h-3.99z"/></svg>';
-                    previewText = 'View PDF Document';
                 } else if (['jpg', 'jpeg', 'png', 'gif'].includes(fileExtension)) {
                     // Image Preview (now constrained by max-height: 250px)
                     iconHtml = `<img class="mx-auto object-contain rounded-lg shadow-inner" 
-                                    src="${file.fileUrl}" 
-                                    alt="Preview" 
-                                    onerror="this.onerror=null;this.src='https://placehold.co/100x100/A0AEC0/FFFFFF?text=Image';"
-                                    ${protectionAttrs}>`;
-                    previewText = 'View Image Concept';
+                        src="${file.fileUrl}" 
+                        alt="Preview" 
+                        onerror="this.onerror=null;this.src='https://placehold.co/100x100/A0AEC0/FFFFFF?text=Image';"
+                        ${protectionAttrs}>`;
                 } else {
                     // General File Icon
                     iconHtml = '<svg class="text-gray-500 mx-auto" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/></svg>';
-                    previewText = 'Unsupported File Type';
                 }
-
-                return `<div class="file-card bg-gray-100 rounded-xl shadow-md cursor-pointer transition hover:shadow-xl hover:bg-white border-2 border-indigo-200" 
+// ${file.fileName}
+                return `<div class="file-card rounded-xl shadow-md cursor-pointer transition hover:shadow-xl border-2" 
                     data-url="${file.fileUrl}" 
-                    data-filename="${file.fileName}" 
+                    data-filename="PREVIEW" 
                     data-extension="${fileExtension}">
                     ${iconHtml}
-                    <h3 class="text-sm font-bold text-gray-800 truncate">${file.fileName}</h3>
                     <p class="text-xs text-indigo-600">${previewText}</p>
                 </div>`;
             };
@@ -625,7 +189,7 @@
             //render 2 images, next button
             const renderFiles = (file1, file2) => {
                 let cardsHtml = '';
-                let buttonHtml = `<button id="counter-button" class="mt-8 transition ease-in-out duration-300 bg-indigo-600 hover:bg-indigo-700 max-w-sm">Next Set (${count})</button>`;
+                let buttonHtml = `<button id="counter-button" class="mt-8 transition ease-in-out duration-300 max-w-sm">&#10151;</button>`; //Set (${count})
 
                 // Build the cards HTML
                 if (file1) cardsHtml += createFileCard(file1);
@@ -651,6 +215,7 @@
                 if (newCounterButton) {
                     newCounterButton.addEventListener('click', () => {
                         count++;
+                        console.log(`Next button clicked ${count} times`);
                         displayNextFile();
                     });
                 }
