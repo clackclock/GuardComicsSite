@@ -1,0 +1,288 @@
+body{
+    margin: 0;
+    background: #222;
+    color: white;
+}
+/* Sidebar Buttons */
+#back-to-library {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-family: "Jersey 15", sans-serif;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 100%;
+}
+#back-to-gallery {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-family: "Jersey 15", sans-serif;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.hidden { display: none; }
+
+/* Book Items (Library View) */
+.book-item {
+    font-size: 1.4rem;
+    color: #ffd700; /* Gold for books */
+    border-bottom: 1px solid #333;
+    padding: 15px 10px !important;
+}
+
+/* Chapter Items (Inside Book View) */
+.chapter-item {
+    font-size: 1rem;
+    padding: 8px 15px !important;
+    margin-bottom: 4px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 4px;
+}
+
+.chapter-item:hover {
+    background: rgba(79, 70, 229, 0.2);
+    color: #ffd700;
+}
+
+/* Optional: Add a scrollbar style for long issue lists */
+#sidebar-list {
+    max-height: 60vh;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #4f46e5 #1a1a1a;
+}
+
+.reader-container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    width: 100vw;
+    overflow: hidden;
+}
+
+.chapter-sidebar {
+    width: 250px;
+    background: #1a1a1a;
+    color: white;
+    padding: 20px;
+    border-right: 2px solid #4f46e5;
+    overflow-y: visible;
+    overflow-x:hidden;
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.chapter-sidebar h2 {
+    font-family: "Jacquarda Bastarda 9", serif;
+    border-bottom: 1px solid #444;
+    padding-bottom: 10px;
+}
+
+.chapter-sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.chapter-sidebar li {
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+    font-family: "Jersey 15", sans-serif;
+    border-radius: 5px;
+}
+
+.chapter-sidebar li:hover {
+    background: #4f46e5;
+}
+
+#pdf-view-parent {
+    flex-grow: 1;
+    background: #333;
+}
+
+#adobe-dc-view {
+    width: 100%;
+    height: 100%;
+}
+
+.search-container {
+    margin-bottom: 15px;
+}
+
+#sidebar-search {
+    width: 100%;
+    background: #1a1a1a;
+    border: 1px solid #4f46e5;
+    color: #e0e0e0;
+    padding: 10px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.1rem;
+    outline: none;
+    border-radius: 4px;
+}
+
+#sidebar-search:focus {
+    box-shadow: 0 0 8px rgba(79, 70, 229, 0.6);
+}
+
+.search-result {
+    border-bottom: 1px solid #222;
+    padding: 10px !important;
+    animation: fadeIn 0.3s ease;
+}
+
+.search-result small {
+    color: #4f46e5;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+#add-favorite-btn {
+    width: 100%;
+    background: #ffd700;
+    color: #111;
+    border: none;
+    padding: 10px;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#add-favorite-btn:hover {
+    background: #ffec80;
+    transform: scale(1.02);
+}
+
+#favorites-section h3 {
+    font-family: "Jacquarda Bastarda 9", serif;
+    font-size: 1.2rem;
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.fav-item {
+    background: #1a1a1a;
+    border-left: 3px solid #ffd700;
+    padding: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-family: "Jersey 15", sans-serif;
+    transition: 0.2s;
+}
+
+.fav-item:hover {
+    background: #252525;
+}
+
+.fav-item strong { font-size: 0.9rem; color: #fff; }
+.fav-item span { font-size: 0.8rem; color: #ffd700; }
+.fav-item small { font-size: 0.7rem; color: #666; }
+
+.delete-fav {
+    background: transparent;
+    color: #ff4444;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.delete-fav:hover { color: #ff8888; }
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#share-page-btn {
+    flex: 1;
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: inherit;
+    font-family: "Jersey 15", sans-serif;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+#share-page-btn:hover {
+    background: #6366f1;
+    transform: translateY(-2px);
+}
+
+#add-favorite-btn {
+    flex: 1; /* Makes both buttons equal width */
+}
+
+/* --- Mobile Menu Toggle (Hidden by default on Desktop) --- */
+#mobile-menu-toggle {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background: #4f46e5;
+    color: white;
+    border: 2px solid #ffd700;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-family: "Jersey 15", sans-serif;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+/* --- Responsive Media Query --- */
+@media (max-width: 768px) {
+    #mobile-menu-toggle {
+        display: block; /* Show button on mobile */
+    }
+
+    .reader-container {
+        flex-direction: column; /* Stack vertically */
+    }
+
+    .chapter-sidebar {
+        position: fixed;
+        left: -100%; /* Hide off-screen to the left */
+        top: 0;
+        height: 100vh;
+        width: 80%; /* Almost full width */
+        z-index: 999;
+        transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* When the menu is toggled open */
+    .chapter-sidebar.mobile-open {
+        left: 0;
+    }
+
+    #pdf-view-parent {
+        width: 100vw;
+        height: 100vh;
+    }
+}

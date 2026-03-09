@@ -1,9 +1,9 @@
 main{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    max-height: 70%;
-    overflow-y:visible;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-height: 70%;
+  overflow-y:visible;
 }
 
 /* Style the tab */
@@ -52,6 +52,172 @@ button{
   flex-wrap: wrap;
   max-height: 70%;
   /*overflow-y: scroll;*/
-  border-top: none;
-  
+  border-top: none; 
+}
+
+/* --- Gallery Container Styles --- */
+.gallery-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Increased gap for breathing room */
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  /* Remove the max-height and overflow if you want the whole page to scroll */
+}
+/* --- Unified Base Style --- */
+.gallery-item, .comic-card {
+  flex: 0 0 calc(20% - 20px); /* Keeps 5 items per row */
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+  text-decoration: none; /* For the <a> tag */
+}
+
+/* --- The "Artisans Alley" Skin (Concept Art) --- */
+.gallery-item {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+/* --- The "Comic Tome" Skin (Comics) --- */
+.comic-card {
+  background: #1a1a1a;
+  border: 2px solid #304D6D; /* Matching your tab color */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Shared Hover Effect --- */
+.gallery-item:hover, .comic-card:hover {
+  transform: scale(1.05) translateY(-5px);
+  z-index: 10;
+}
+
+.comic-card:hover {
+  border-color: #4f46e5;
+  box-shadow: 0 10px 20px rgba(79, 70, 229, 0.3);
+}
+
+/* --- Image Handling --- */
+.gallery-item img, .comic-card img {
+  width: 100%;
+  height: 180px; /* 250 height for a better comic aspect ratio */
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Title Styles --- */
+.gallery-item .title {
+  padding: 10px;
+  font-family: "Sankofa Display", sans-serif;
+  color: #333;
+  font-weight: bold;
+}
+.comic-card .title {
+  padding: 10px;
+  font-family: 'Jersey 15', sans-serif;
+  color: #ffd700; /* Gold text for comics */
+  font-size: 1.2rem;
+}
+
+/* --- Modal (Lightbox) Styles --- */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 100;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+  animation: fadeIn 0.3s;
+}
+.modal-content-wrapper {
+  position: relative;
+  margin: 5% auto;
+  /* 5% from the top and centered */
+  padding: 0;
+  width: 90%;
+  /* Width of the content box */
+  max-width: 800px;
+  text-align: center;
+}
+.modal-content-wrapper img,
+.modal-content-wrapper embed {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  /* Set a maximum height relative to the viewport */
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* The Close Button */
+.close-btn {
+  position: absolute;
+  top: -30px;
+  /* Position above the content */
+  right: 0px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* --- Responsive Gallery Styles --- */
+@media (max-width: 1024px) {
+  .gallery-item {
+    flex: 0 0 calc(25% - 10px);
+  }
+}
+@media (max-width: 768px) {
+  .gallery-item {
+    flex: 0 0 calc(33.33% - 10px);
+  }
+  .modal-content-wrapper {
+    margin-top: 10%;
+  }
+}
+@media (max-width: 480px) {
+  .gallery-item {
+    flex: 0 0 calc(50% - 10px);
+  }
+  .close-btn {
+    top: -35px;
+  }
 }

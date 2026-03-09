@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grand Library</title>
+    <link rel="icon" type="image/svg+xml" href="../images/guardLogo.png" />
+    <link rel="stylesheet" href="readerStyle.css">
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script src="readerScript.js" defer></script>
+</head>
+<body oncontextmenu="return false;">
+    <div class="reader-container">
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()">📜 Menu</button>
+        <nav class="chapter-sidebar">
+            <div id="library-header">
+                <h2 id="current-view-title">The Grand Library</h2>
+                <div class="search-container">
+                    <input type="text" id="sidebar-search" placeholder="Search archives..." onkeyup="handleSearch()">
+                </div>
+                <div class="action-buttons">
+                    <button id="add-favorite-btn" onclick="saveCurrentPageToFavorites()">⭐ Bookmark</button>
+                    <button id="share-page-btn" onclick="generateShareLink()">🔗 Share Page</button>
+                </div>
+                <button id="back-to-library" class="hidden" onclick="showLibrary()">← Back to Library</button>
+                <button id="back-to-gallery" onclick="window.location.href='/gallery'">← Back to Gallery</button>
+            </div>
+
+            <div id="favorites-section">
+                <h3>Your Bookmarks</h3>
+                <ul id="favorites-list"></ul>
+            </div>
+
+            <hr style="border: 1px solid #333; margin: 15px 0;">
+
+            <ul id="sidebar-list"></ul>
+        </nav>
+
+        <main id="pdf-view-parent">
+            <div id="adobe-dc-view"></div>
+        </main>
+    </div>
+</body>
+</html>

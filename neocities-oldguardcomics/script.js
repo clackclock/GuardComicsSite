@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { fileName: 'smoke_bubble_characterSheet.jpg', fileUrl: '/_archive/smoke_bubble_characterSheet.jpg' },
       { fileName: 'trishca_concept.jpg', fileUrl: '/_archive/trishca_concept.jpg' },
       
-      { fileName: 'Document-1.pdf', fileUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
+      // { fileName: 'Document-1.pdf', fileUrl: 'https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf' }
       // { fileName: 'Unsupported-file.txt', fileUrl: 'somefile.txt' }
     ];
 

@@ -35,7 +35,7 @@ header {
     flex-direction: row;
     justify-content: center;
     gap: 5px;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     background-color: #1f2937;
     width:100vw;
     font-weight: bold;
@@ -362,7 +362,7 @@ button {
     display: inline-block;
     font-size: 13pt;
     width: 200px;
-    height: 60px;
+    max-height: 60px; 
     padding: 18px;
     text-align: center;
     text-decoration: none;
