@@ -172,3 +172,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // Finally, initialize the tabs to show the default one
     initializeTabs();
 });
+
+//Thumbnails
+async function generatePDFThumbnail(pdfUrl, imgElement) {
+    try {
+        const loadingTask = pdfjsLib.getDocument(pdfUrl);
+        const pdf = await loadingTask.promise;
+        const page = await pdf.getPage(1);
+
+        const canvas = document.createElement('canvas');
+        const context = canvas.getContext('2d');
+        const viewport = page.getViewport({ scale: 0.3 }); // Small scale for thumb
+
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        await page.render({ canvasContext: context, viewport: viewport }).promise;
+        imgElement.src = canvas.toDataURL();
+    } catch (e) {
+        console.error("Thumbnail error:", e);
+        imgElement.src = "/images/Chess_knight.png"; // Fallback image
+    }
+}

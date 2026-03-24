@@ -6,7 +6,7 @@
     <title>Grand Library</title>
     <link rel="icon" type="image/svg+xml" href="../images/guardLogo.png" />
     <link rel="stylesheet" href="readerStyle.css">
-    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
     <script src="readerScript.js" defer></script>
 </head>
 <body oncontextmenu="return false;">
@@ -24,6 +24,7 @@
                 </div>
                 <button id="back-to-library" class="hidden" onclick="showLibrary()">← Back to Library</button>
                 <button id="back-to-gallery" onclick="window.location.href='/gallery'">← Back to Gallery</button>
+                <button id="zoom-toggle-btn" onclick="toggleViewMode()">🔍 Zoom In</button>
             </div>
 
             <div id="favorites-section">
@@ -37,7 +38,22 @@
         </nav>
 
         <main id="pdf-view-parent">
-            <div id="adobe-dc-view"></div>
+            <div id="pdf-viewer-container" > <!-- style="position: relative;"-->
+                <div id="reader-placeholder">
+                    <div class="placeholder-content">
+                        <span class="placeholder-icon">📜</span>
+                        <h3>Select a Book from the Library</h3>
+                        <p>Choose an issue from the sidebar to begin your journey.</p>
+                    </div>
+                </div>
+
+                <div id="loading-spinner" class="spinner-hidden">
+                    <div class="loader"></div>
+                    <p>Unrolling Scroll...</p>
+                </div>
+                
+                <canvas id="pdf-render-canvas"></canvas>
+            </div>
         </main>
     </div>
 </body>
