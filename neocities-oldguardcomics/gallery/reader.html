@@ -11,7 +11,7 @@
 </head>
 <body oncontextmenu="return false;">
     <div class="reader-container">
-        <button id="mobile-menu-toggle" onclick="toggleMobileMenu()">📜 Menu</button>
+        <button id="mobile-menu-toggle" onclick="toggleMobileMenu(event)">📜 Menu</button>
         <nav class="chapter-sidebar">
             <div id="library-header">
                 <h2 id="current-view-title">The Grand Library</h2>
@@ -38,7 +38,7 @@
         </nav>
 
         <main id="pdf-view-parent">
-            <div id="pdf-viewer-container" > <!-- style="position: relative;"-->
+            <div id="pdf-viewer-container" style="position: relative;"> <!-- style="position: relative;"-->
                 <div id="reader-placeholder">
                     <div class="placeholder-content">
                         <span class="placeholder-icon">📜</span>

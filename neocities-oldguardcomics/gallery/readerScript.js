@@ -1,7 +1,7 @@
 const libraryData = [
     {
         title: "OGC Issue #1: The Bear",
-        pdfUrl: "/_archive/1963_mlk_letter.pdf",
+        pdfUrl: "/neocities-oldguardcomics/_archive/1963_mlk_letter.pdf",
         totalPages: 11 
     },
     {
@@ -308,9 +308,10 @@ function generateShareLink() {
 }
 
 // UI 
-function toggleMobileMenu() {
+function toggleMobileMenu(event) {
     const sidebar = document.querySelector('.chapter-sidebar');
     if (!sidebar) return;
+    
     sidebar.classList.toggle('mobile-open');
     const btn = document.getElementById('mobile-menu-toggle');
     if (btn) btn.textContent = sidebar.classList.contains('mobile-open') ? "✖ Close" : "📜 Menu";
@@ -333,6 +334,30 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
+
+// Touch should be for the touch area not the whole document
+const readerArea = document.getElementById('pdf-view-parent');
+readerArea.addEventListener('touchend', (e) => {
+    if (!pdfDoc) return;
+    
+    // If the sidebar is open, don't turn pages (prevents accidents)
+    const sidebar = document.querySelector('.chapter-sidebar');
+    if (sidebar.classList.contains('mobile-open')) return;
+
+    // Ignore if the user is touching the menu button itself
+    if (e.target.id === 'mobile-menu-toggle') return;
+
+    const touch = e.changedTouches[0];
+    const screenWidth = window.innerWidth;
+    const touchX = touch.clientX;
+
+    // Tap Zones (Left 30% / Right 30%)
+    if (touchX < screenWidth * 0.3) {
+        if (pageNum > 1) goToChapter(pageNum - 1);
+    } else if (touchX > screenWidth * 0.7) {
+        if (pageNum < pdfDoc.numPages) goToChapter(pageNum + 1);
+    }
+}, { passive: true });
 
 function updateActiveUI(num) {
     // Maybe highlight the current page in the sidebar list

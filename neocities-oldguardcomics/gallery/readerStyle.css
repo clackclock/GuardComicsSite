@@ -153,6 +153,11 @@ body {
     background: rgba(255, 255, 255, 0.5);
 }
 
+#pdf-render-canvas, #pdf-view-parent {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: pan-y; /* Allows vertical scrolling but prevents browser-level horizontal gestures */
+}
+
 /* ==========================================
    6. PLACEHOLDERS & LOADERS
    ========================================== */
@@ -371,6 +376,9 @@ body {
     font-family: "Jersey 15", sans-serif;
     font-size: 1.2rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+
+    touch-action: manipulation; /* Prevents accidental double-tap zooming */
+    pointer-events: auto;       /* Ensures the button stays clickable */
 }
 
 @media (max-width: 768px) {
@@ -400,5 +408,6 @@ body {
     #pdf-view-parent {
         width: 100vw;
         height: 100vh;
+        padding: 0%;
     }
 }
