@@ -119,29 +119,26 @@ function renderPDF(url) {
     });
 }
 function renderPage(num) {
-    if (!pdfDoc) return;
+    if (!pdfDoc || num < 1 || num > pdfDoc.numPages) return; // Safety check
     toggleLoader(true);
 
     pdfDoc.getPage(num).then(page => {
         const container = document.getElementById('pdf-view-parent');
-        
-        // Use getViewport (WITHOUT the "Page" in the middle)
-        const unscaledViewport = page.getViewport({ scale: 0.9 });
+        const unscaledViewport = page.getViewport({ scale: 1 });
         let finalScale;
 
         if (viewMode === 'fit') {
-            // "Fit to Screen" Logic (Container height minus padding)
             const availableHeight = container.clientHeight - 60; 
             finalScale = availableHeight / unscaledViewport.height;
             container.style.overflowY = "hidden"; 
         } else {
-            // "Zoom / Original" Logic
-            finalScale = 1.5; 
+            // Zoom Mode: Use a higher scale for mobile readability
+            finalScale = window.innerWidth <= 768 ? 2.0 : 1.5; 
             container.style.overflowY = "auto";
+            container.scrollTop = 0;
         }
 
         const viewport = page.getViewport({ scale: finalScale });
-        
         canvas.height = viewport.height;
         canvas.width = viewport.width;
 
@@ -194,9 +191,17 @@ function toggleLoader(show) {
 }
 
 function goToChapter(pageNumber) {
-    if (pdfDoc) {
-        renderPage(pageNumber);
-        if (window.innerWidth <= 768) toggleMobileMenu();
+    // Add safety checks to prevent going out of bounds
+    if (!pdfDoc) return;
+    if (pageNumber < 1) pageNumber = 1;
+    if (pageNumber > pdfDoc.numPages) pageNumber = pdfDoc.numPages;
+
+    renderPage(pageNumber);
+
+    // Only close the menu if it is actually open
+    const sidebar = document.querySelector('.chapter-sidebar');
+    if (window.innerWidth <= 768 && sidebar.classList.contains('mobile-open')) {
+        toggleMobileMenu();
     }
 }
 
@@ -334,30 +339,6 @@ document.addEventListener('keydown', (e) => {
         }
     }
 });
-
-// Touch should be for the touch area not the whole document
-const readerArea = document.getElementById('pdf-view-parent');
-readerArea.addEventListener('touchend', (e) => {
-    if (!pdfDoc) return;
-    
-    // If the sidebar is open, don't turn pages (prevents accidents)
-    const sidebar = document.querySelector('.chapter-sidebar');
-    if (sidebar.classList.contains('mobile-open')) return;
-
-    // Ignore if the user is touching the menu button itself
-    if (e.target.id === 'mobile-menu-toggle') return;
-
-    const touch = e.changedTouches[0];
-    const screenWidth = window.innerWidth;
-    const touchX = touch.clientX;
-
-    // Tap Zones (Left 30% / Right 30%)
-    if (touchX < screenWidth * 0.3) {
-        if (pageNum > 1) goToChapter(pageNum - 1);
-    } else if (touchX > screenWidth * 0.7) {
-        if (pageNum < pdfDoc.numPages) goToChapter(pageNum + 1);
-    }
-}, { passive: true });
 
 function updateActiveUI(num) {
     // Maybe highlight the current page in the sidebar list

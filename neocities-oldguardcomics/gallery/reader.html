@@ -38,6 +38,9 @@
         </nav>
 
         <main id="pdf-view-parent">
+            <button id="prev-page-btn" class="nav-btn mobile-only" onclick="event.stopPropagation(); goToChapter(pageNum - 1)">⬅</button>
+            <button id="next-page-btn" class="nav-btn mobile-only" onclick="event.stopPropagation(); goToChapter(pageNum + 1)">➡</button>
+            
             <div id="pdf-viewer-container" style="position: relative;"> <!-- style="position: relative;"-->
                 <div id="reader-placeholder">
                     <div class="placeholder-content">

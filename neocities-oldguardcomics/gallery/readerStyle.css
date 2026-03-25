@@ -136,21 +136,31 @@ body {
     flex-grow: 1;
     background: #333;
     overflow-x: hidden; /* Prevent horizontal wobble */
+    overflow-y: auto; 
     display: flex;
     flex-direction: column;
     align-items: center; /* Keeps the comic centered horizontally */
-    padding: 20px;
-    padding-top: 0%;
-    padding-bottom: 0%;
     position: relative;
-    scroll-behavior: auto; /* Ensures manual jumps are precise */
+
+    /* Centering Hack for scrolled content */
+    justify-content: flex-start; 
+    padding: 10px 0; /* Vertical padding only */
+    scroll-behavior: smooth;
+    
+    /* Ensure the container takes full height to allow centering */
+    height: 100%;
 }
 
 #pdf-render-canvas {
-    max-height: 100%; /* Ensures it never grows taller than the screen */
-    width: auto;      /* Keeps the aspect ratio perfect */
+    max-width: 100%;   /* Keeps it from leaking off the sides */
+    height: auto;      
+    display: block;    /* Removes bottom whitespace gap */
+    margin: 0 auto;    /* Horizontal centering */
     box-shadow: 0 0 30px rgba(0,0,0,0.7);
     background: rgba(255, 255, 255, 0.5);
+    
+    /* Performance boost for mobile rendering */
+    will-change: transform;
 }
 
 #pdf-render-canvas, #pdf-view-parent {
@@ -165,7 +175,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 99.5%;
+    /* width: 99.5%; */
     height: 99.5%;
     min-height: 600px;
     background: #2a2a2a;
@@ -381,6 +391,10 @@ body {
     pointer-events: auto;       /* Ensures the button stays clickable */
 }
 
+.nav-btn.mobile-only {
+    display: none;
+}
+
 @media (max-width: 768px) {
     #mobile-menu-toggle {
         display: block; /* Show button on mobile */
@@ -405,9 +419,51 @@ body {
         left: 0;
     }
 
+    .mobile-only {
+        display: flex !important;
+    }
+
+    .nav-btn {
+        display: flex !important; /* Force display */
+        position: fixed;
+        bottom: 20px;
+        z-index: 1001; /* Higher than the sidebar (999) and menu toggle (1000) */
+        background: #4f46e5;
+        color: white;
+        border: 2px solid #ffd700;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        pointer-events: auto; /* Ensure they are clickable */
+    }
+
+    #prev-page-btn {
+        right: 225px; /* Positioned to the left of the Menu button */
+    }
+    #next-page-btn {
+        right: 20px; /* Positioned to the right of the Menu button */
+    }
+
+    /* Move the Menu button to the middle of the two */
+    #mobile-menu-toggle {
+        right: 85px; 
+        bottom: 20px;
+        width: auto;
+    }
+
     #pdf-view-parent {
-        width: 100vw;
-        height: 100vh;
-        padding: 0%;
+        display: block; 
+        overflow-y: auto;
+        padding-bottom: 100px; /* Space so buttons don't cover the comic */
+    }
+
+    #pdf-render-canvas {
+        max-width: 100%;
+        height: auto !important; /* Forces the zoom to actually work */
+        margin: 0 auto;
     }
 }
